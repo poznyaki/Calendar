@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import PropTypes from "prop-types";
 import style from "./Main.module.scss";
 import AddForm from "../AddForm/AddForm";
 import { FaRegCalendarPlus } from "react-icons/fa";
