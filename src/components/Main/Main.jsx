@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import style from "./Main.module.scss";
 import AddForm from "../AddForm/AddForm";
 import { FaRegCalendarPlus } from "react-icons/fa";
@@ -8,7 +8,7 @@ import WCalendar from "../WCalendar/WCalendar";
 import DCalendar from "../DCalendar/DCalendar";
 import RegisterPage from "../Auth/RegisterPage";
 
-function Main(props) {
+function Main() {
     const [modalOpen, setModalOpen] = React.useState(false);
     return (
         <main className={style.wrapper}>

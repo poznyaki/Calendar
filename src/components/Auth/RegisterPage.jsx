@@ -1,7 +1,7 @@
 import style from './Auth.module.scss'
 import { useForm } from 'react-hook-form';
 
-function RegisterPage(props) {
+function RegisterPage() {
   const {
       register,
       handleSubmit,
@@ -58,7 +58,5 @@ function RegisterPage(props) {
     </div>
   )
 }
-
-RegisterPage.PropTypes = {};
 
 export default RegisterPage;
