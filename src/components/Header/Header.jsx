@@ -1,18 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
 import style from "./Header.module.scss";
 import { BsCalendar3, BsCalendar4Week } from "react-icons/bs";
 import { IoTodayOutline } from "react-icons/io5";
-import { IoMdCalendar } from "react-icons/io";
 import { NavLink } from "react-router";
 
-function Header(props) {
+function Header() {
     return (
         <header className={style.wrapper}>
             <NavLink to="/" className={style.logoBar}>
                 <BsCalendar3 className={style.icon} />
                 <div className="title">RoboCalendar</div>
             </NavLink>
+
+            <NavLink to="/login" className={style.logoBar}>
+                <h6>Login</h6>
+            </NavLink>
+
+            <NavLink to="/register" className={style.logoBar}>
+                <h6>Register</h6>
+            </NavLink>
+
             <nav className={style.navBar}>
                 <NavLink
                     to="/"
@@ -45,7 +51,5 @@ function Header(props) {
         </header>
     );
 }
-
-Header.propTypes = {};
 
 export default Header;

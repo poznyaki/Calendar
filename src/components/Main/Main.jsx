@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "./Main.module.scss";
 import AddForm from "../AddForm/AddForm";
 import { FaRegCalendarPlus } from "react-icons/fa";
@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router";
 import WCalendar from "../WCalendar/WCalendar";
 import DCalendar from "../DCalendar/DCalendar";
 import RegisterPage from "../Auth/RegisterPage";
+import LoginPage from "../Auth/LoginPage";
 
 function Main() {
     const [modalOpen, setModalOpen] = React.useState(false);
@@ -24,11 +25,11 @@ function Main() {
                 <Route path="/week" element={<WCalendar />} />
                 <Route path="/day" element={<DCalendar />} />
                 <Route path="/register" element={<RegisterPage />} />
+                <Route path="/login" element={<LoginPage />} />
             </Routes>
         </main>
     );
 }
 
-Main.propTypes = {};
 
 export default Main;

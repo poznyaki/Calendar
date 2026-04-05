@@ -1,17 +1,15 @@
 import style from './Auth.module.scss'
 import { useForm } from 'react-hook-form';
 
-function RegisterPage() {
+function LoginPage() {
   const {
       register,
       handleSubmit,
       formState: { errors },
-      watch,
   } = useForm();
-
   return (
     <div className={style.wrapper}>
-        <h1>Register</h1>
+        <h1>Login</h1>
         <form onSubmit={handleSubmit((data) => console.log(data))}>
             <label htmlFor="email">Email</label>
             <input 
@@ -52,13 +50,10 @@ function RegisterPage() {
              />
             <span>{errors.password?.message}</span>
             <br />
-
             <br />
-            <button className={style.button}>Register</button>
+            <button className={style.button}>Login</button>
         </form>
     </div>
   )
 }
-
-
-export default RegisterPage;
+export default LoginPage;
