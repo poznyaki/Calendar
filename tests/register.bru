@@ -1,0 +1,19 @@
+meta {
+  name: New HTTP Request
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "login": "1",
+    "email": "1",
+    "password": "1"
+  }
+}
