@@ -14,7 +14,7 @@ services:
     env_file:
       - .env
     ports: 
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql
       - ./dbmysql.sql:/docker-entrypoint-initdb.d/dbmysql.sql
