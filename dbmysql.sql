@@ -13,4 +13,5 @@ CREATE TABLE `Events`(
     `color` VARCHAR(255) NOT NULL
 );
 ALTER TABLE
-    `Users` ADD CONSTRAINT `users_id_foreign` FOREIGN KEY(`id`) REFERENCES `Events`(`user_id`);
+    `Events` ADD CONSTRAINT `events_user_id_foreign` 
+    FOREIGN KEY(`user_id`) REFERENCES `Users`(`id`) ON DELETE CASCADE;
