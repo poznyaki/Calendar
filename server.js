@@ -35,6 +35,13 @@ app.post("/register", async(req, res)=>{
                 error: "User with this login or email already exist!"
             })
         }
+        const salt = await bcrypt.genSalt(10)
+        const hashedPassword = await bcrypt.hash(password, salt)
+        await pool.query(
+            "INSERT INTO Users (login, email, password) VALUES (?, ?, ?)",
+            [login, email, hashedPassword]
+        )
+        res.status(201).send({message: "User register successefully!"})
     }
     catch(error) {
         res.status(500).send({

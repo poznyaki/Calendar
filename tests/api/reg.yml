@@ -1,0 +1,22 @@
+info:
+  name: reg
+  type: http
+
+http:
+  method: POST
+  url: http://localhost:3000/register
+  body:
+    type: json
+    data: |2-
+        {
+          "login": "login",
+          "email": "email",
+          "password": "password"
+        }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
